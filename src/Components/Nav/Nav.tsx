@@ -1,43 +1,48 @@
 import { Link } from "react-router-dom";
 import {MainNavContainer,
     LogoContainer,HamBurgerMenuStyle,
-    NavLinks,NavLink
+    NavLinksContainer,NavLink
 } from "./Nav.style";
 import Logo from "../../assets/image/general/logo.svg";
 import {GiHamburgerMenu} from "react-icons/gi";
+import {RiCloseFill} from  "react-icons/ri";
+import { useState } from "react";
 const Nav =()=>{
 
-
+    const [phoneHamState,setPhoneHamState] = useState<boolean>(false)
 
     return (
-       <MainNavContainer>
+       <MainNavContainer >
 
                 <LogoContainer>
                         <img src={Logo}/>
                 </LogoContainer>
 
 
-                <NavLinks>
+                <NavLinksContainer showPhoneNav={phoneHamState}>
                         <NavLink>
-                            <a href="#">00 Home</a>
+                            <a href="#"><span>00</span> Home</a>
                         </NavLink>
 
                         <NavLink>
-                        <a href="#">01 DESTINATION</a>
+                        <a href="#"><span>01</span> DESTINATION</a>
                         </NavLink>
 
                         <NavLink>
-                            <a href="#">02 CREW</a>
+                            <a href="#"><span>02</span> CREW</a>
                         </NavLink>
 
                         <NavLink>
-                            <a href="#">03 TECHNOLOGY</a>
+                            <a href="#">
+                        <span>0 3</span> TECHNOLOGY</a>
                         </NavLink>
-                </NavLinks>
+                </NavLinksContainer>
 
-                <HamBurgerMenuStyle>
+                <HamBurgerMenuStyle  onClick={(e)=>setPhoneHamState(!phoneHamState)}>
+                    {phoneHamState?
+                        <RiCloseFill/>:<GiHamburgerMenu/>
+                    }
 
-                        <GiHamburgerMenu />
                 </HamBurgerMenuStyle>
 
        </MainNavContainer> 

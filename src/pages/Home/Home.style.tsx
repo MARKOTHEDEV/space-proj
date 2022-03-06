@@ -13,3 +13,9 @@ export const HeroImageBackground = styled.div`
 
 
 `
+
+export const HeroContainer = styled.div``
+export const HeroContentContainer = styled.div``
+export const HeroHeadingText = styled.div``
+
+export const RoundExplore = styled.div``
