@@ -8,6 +8,9 @@ const theme ={
       "whiteColor":"#FFFFFF",
       "darkColor":"#0B0D17"
 
+    },
+    mediaQueryNumber:{
+        tablet:"600px",
     }
 }
 function App() {
