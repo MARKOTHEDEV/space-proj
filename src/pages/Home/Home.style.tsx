@@ -24,7 +24,7 @@ height: 80%;
 export const HeroContentContainer = styled.div`
 
 text-align: center;
-font-size: 15px;
+font-size: 17px;
 padding:1.4rem 1.5rem;
 /* border:1px solid red; */
 p{
