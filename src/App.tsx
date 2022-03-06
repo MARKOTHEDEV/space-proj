@@ -6,7 +6,7 @@ import Home from './pages/Home/Home';
 const theme ={
     textColor:{
       "whiteColor":"#FFFFFF",
-    
+      "darkColor":"#0B0D17"
 
     }
 }
