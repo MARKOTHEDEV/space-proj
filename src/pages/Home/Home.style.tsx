@@ -6,13 +6,13 @@ import TabletHeroImage from "../../assets/image/home/background-home-tablet.jpg"
 
 
 export const HeroImageBackground = styled.div`
-    /* border: 1px solid red; */
+    border: 1px solid red;
     height: 100vh;
     /* width: 100vw; */
     background-repeat:  no-repeat;
     background-position:center;
     background-size: cover;
-    background: url(${MobileHeroImage}) no-repeat ;
+    background: url(${TabletHeroImage}) no-repeat ;
     @media screen  and (min-width:400px){
         background: url(${TabletHeroImage}) no-repeat ;
         
@@ -28,8 +28,11 @@ export const HeroContainer = styled.div`
 display: flex;
 flex-direction: column;
 justify-content:space-between;
-/* border: 1px solid yellow; */
-height: 80%;
+/* align-content: center; */
+margin-top: 25%;
+border: 1px solid yellow;
+height: 60%;
+padding:1rem 0;
 
 @media screen  and (min-width:900px){
     flex-direction: row;
