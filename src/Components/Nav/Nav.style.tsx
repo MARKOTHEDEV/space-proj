@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-
+import { BlurBackGround } from "../Mixins";
 
 
 
@@ -11,7 +11,7 @@ justify-content: space-around;
 justify-content: space-between;
 align-items: center;
 position: relative;
-
+z-index: 10;
 @media screen and (min-width:600px) {
     &{
         padding-right: 0;
@@ -91,8 +91,7 @@ export  const NavLinksContainer = styled.ul`
     height: 100vh;
     width: 65%;
     transition: transform 1s ease-in-out;
-    backdrop-filter: blur(10px) ;
-    background-color: rgba(255, 255, 255, 0.068);
+    ${BlurBackGround()}
     
     @media screen  and (min-width:600px){
     

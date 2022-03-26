@@ -2,16 +2,19 @@ import styled from "styled-components";
 import DesktopHeroImage from "../../assets/image/home/background-home-desktop.jpg";
 import MobileHeroImage from "../../assets/image/home/background-home-mobile.jpg";
 import TabletHeroImage from "../../assets/image/home/background-home-tablet.jpg";
+import { BlurBackGround } from "../../Components/Mixins";
 
 
 
 export const HeroImageBackground = styled.div`
-    border: 1px solid red;
+    /* border: 1px solid red; */
     height: 100vh;
     /* width: 100vw; */
     background-repeat:  no-repeat;
     background-position:center;
     background-size: cover;
+    z-index: 1;
+    position: relative;
     background: url(${TabletHeroImage}) no-repeat ;
     @media screen  and (min-width:400px){
         background: url(${TabletHeroImage}) no-repeat ;
@@ -30,7 +33,7 @@ flex-direction: column;
 justify-content:space-between;
 /* align-content: center; */
 margin-top: 25%;
-border: 1px solid yellow;
+/* border: 1px solid yellow; */
 height: 60%;
 padding:1rem 0;
 
@@ -96,20 +99,25 @@ cursor: pointer;
 /* position: relative; */
 /* z-index:1000000; */
 
-/* &::after{
-content: "";
-position: absolute;
-top:0 ;
-left:0 ;
-width: 250px;
-height: 250px;
-background-color: red;
-border-radius: 50%;
 
-} */
+position: relative;
+/* z-index: 1; */
 
-&:hover::after{
-transform: scale(2.2);
+&::after{
+    /* border: 1px solid red; */
+    ${BlurBackGround()}
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  border-radius: 50%;
+  transition: transform 250ms;
+}
+&:hover::after {
+  transform: scale(1.7);
 }
 @media screen  and (min-width:900px){
     width: 250px;
@@ -122,4 +130,5 @@ margin-left:auto ;
 
 export const RoundExploreContainer=styled.div`
 
+    /* &: */
 `

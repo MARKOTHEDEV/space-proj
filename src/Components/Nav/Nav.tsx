@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link  } from "react-router-dom";
 import {MainNavContainer,
     LogoContainer,HamBurgerMenuStyle,
     NavLinksContainer,NavLink
@@ -7,10 +7,11 @@ import Logo from "../../assets/image/general/logo.svg";
 import {GiHamburgerMenu} from "react-icons/gi";
 import {RiCloseFill} from  "react-icons/ri";
 import { useState } from "react";
+
 const Nav =()=>{
 
     const [phoneHamState,setPhoneHamState] = useState<boolean>(false)
-
+ 
     return (
        <MainNavContainer >
 
@@ -21,11 +22,12 @@ const Nav =()=>{
 
                 <NavLinksContainer showPhoneNav={phoneHamState}>
                         <NavLink>
-                            <a href="#"><span>00</span> Home</a>
+                            <Link to="/"><span>00</span> Home</Link>
                         </NavLink>
 
                         <NavLink>
-                        <a href="#"><span>01</span> DESTINATION</a>
+                        <Link to="/destination"><span>01</span> DESTINATION</Link>
+                       
                         </NavLink>
 
                         <NavLink>
