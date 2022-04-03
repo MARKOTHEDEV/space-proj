@@ -90,7 +90,7 @@ export  const NavLinksContainer = styled.ul`
     right: 0;
     height: 100vh;
     width: 65%;
-    transition: transform 1s ease-in-out;
+    transition: transform .5s ease-in-out;
     ${BlurBackGround()}
     
     @media screen  and (min-width:600px){
