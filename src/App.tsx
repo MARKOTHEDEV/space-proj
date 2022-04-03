@@ -3,21 +3,7 @@ import { ThemeProvider } from 'styled-components';
 import './App.css';
 import Home from './pages/Home/Home';
 import Destination from './pages/Destination/Destination';
-
-const theme ={
-    textColor:{
-      "whiteColor":"#FFFFFF",
-      "darkColor":"#0B0D17"
-
-    },
-    mediaQueryNumber:{
-        tablet:"600px",
-        mobile:"360px",
-    },
-    color:{
-        "dark":"#0B0D17"
-    }
-}
+import theme from "./theme/theme";
 
 
 const App=()=>{
