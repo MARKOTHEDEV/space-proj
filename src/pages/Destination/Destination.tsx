@@ -3,7 +3,8 @@ import {
     Notification,NotificationTitle,
     FlexTwoItems,PlanetPic,PlanetPicContainer,
     TabComponentContainer,TabComponentNav,TabComponentContentContainer,
-    DestinationExtraConentInfo
+    DestinationExtraConentInfo,
+    PThatHastheMainContentInTabComponentContentContainer,DestinationBox
     } from "./Destination.style"
 import PlanetImage from "../../assets/image/destination/image-titan.png";
 import Line from "../../Components/Line";
@@ -14,8 +15,8 @@ const  Destination= ()=>{
     return (
 
         <GeneralTheme>
-
-           <Notification>
+<DestinationBox>
+<Notification>
                     <NotificationTitle>
                         <span>01</span>
                         <span>PICK YOUR DESTINATION</span>
@@ -25,7 +26,13 @@ const  Destination= ()=>{
             </Notification> 
 
 
-            <FlexTwoItems>
+            <FlexTwoItems 
+            flexAtWhatpx={800}
+            widthInPercent={100}
+            spaceAround={true}
+            isCenter={true}
+            
+            >
                 <PlanetPicContainer>
                         <PlanetPic src={PlanetImage} />
                 </PlanetPicContainer>
@@ -41,14 +48,19 @@ const  Destination= ()=>{
                     <TabComponentContentContainer>
                         <h2>TITAN</h2>
                         {/* <br /> */}
-                        <p>The only moon Known to have a dence atmosphere other than Earth,Titan is a home
-                            away from home(just a few hundred degrees colder!). As a bonus,you get striking views of the
-                            Ring of Saturn
-                        </p>
+                        <PThatHastheMainContentInTabComponentContentContainer>
+The only moon Known to have a dence atmosphere other than
+ Earth,Titan is a home
+away from home(just a few hundred degrees colder!).
+ As a bonus,you get striking views of the
+Ring of Saturn
+                        </PThatHastheMainContentInTabComponentContentContainer>
 
                 <Line  marginBottom="1rem"/>
 
-                    <FlexTwoItems>
+                    <FlexTwoItems flexAtWhatpx={834}
+                    widthInPercent={60}
+                    isCenter={true}>
                         <DestinationExtraConentInfo>
                             <p><small>AVG. DISTANCE</small></p>
                             <p>1.6 BIL. KM</p>
@@ -67,6 +79,8 @@ const  Destination= ()=>{
 
 
             </FlexTwoItems>
+</DestinationBox>
+           
         </GeneralTheme>
     )
 }
