@@ -53,7 +53,7 @@ flex-direction: column;
     align-items: center;
     justify-content: space-between;
     /* justify-content: ; */
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     ${(props)=>props.widthInPercent?`width:${props.widthInPercent}%;`:""}
     ${(props)=>props.isCenter?"margin-left:auto;margin-right:auto;":""}
     ${(props)=>props.spaceAround?
@@ -95,7 +95,7 @@ height: 100%;
 
 export const DestinationExtraConentInfo = styled.div`
 padding-top:1rem;
-border: 1px solid red;
+/* border: 1px solid red; */
 width: 100%;
 
 p{

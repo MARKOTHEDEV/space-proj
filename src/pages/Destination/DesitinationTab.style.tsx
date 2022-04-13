@@ -43,10 +43,12 @@ p::after{
         transform: translate(-50%, -50%);
         /* border: 1px solid red; */
         background-color:transparent;
+      color:transparent;
         transition:   background-color .4s ease-in-out;
     }
     p:hover::after{
         background-color: ${({theme})=>theme.textColor.whiteColor};
+        color: ${({theme})=>theme.textColor.whiteColor};
     }
     p:hover{
         color:${({theme})=>theme.textColor.whiteColor};
@@ -57,6 +59,12 @@ p::after{
         ${(props)=>props.CurrentTab}
     )::after{
         background-color: ${({theme})=>theme.textColor.whiteColor};
+        
+    }
+    p:nth-child(
+        ${(props)=>props.CurrentTab}
+        ){
+        color: ${({theme})=>theme.textColor.whiteColor};
 
     }
 
