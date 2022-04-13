@@ -77,8 +77,9 @@ const DestinationTab=({tabContent}:{tabContent:DestinationTab[]})=>{
 
                     <FlexTwoItems 
                     flexAtWhatpx={834}
-                    widthInPercent={60}
-                    isCenter={true}>
+                    widthInPercent={100}
+                    isCenter={true}
+                    >
                         <DestinationExtraConentInfo>
                             <p><small>AVG. DISTANCE</small></p>
                             <p>

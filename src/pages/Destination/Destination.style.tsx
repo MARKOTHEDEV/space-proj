@@ -53,7 +53,7 @@ flex-direction: column;
     align-items: center;
     justify-content: space-between;
     /* justify-content: ; */
-    /* border: 1px solid red; */
+    border: 1px solid blue;
     ${(props)=>props.widthInPercent?`width:${props.widthInPercent}%;`:""}
     ${(props)=>props.isCenter?"margin-left:auto;margin-right:auto;":""}
     ${(props)=>props.spaceAround?
@@ -95,6 +95,9 @@ height: 100%;
 
 export const DestinationExtraConentInfo = styled.div`
 padding-top:1rem;
+border: 1px solid red;
+width: 100%;
+
 p{
     width: 100%;
 }
@@ -105,6 +108,13 @@ padding: .4rem 0;
 width: 100%;
 
 }
+
+@media screen and (min-width:850px) {
+    width: 48%;
+    /* flex-wrap: wrap; */
+}
+
+
 /* border: 1px solid red; */
 
 `
