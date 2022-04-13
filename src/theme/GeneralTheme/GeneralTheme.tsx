@@ -1,5 +1,5 @@
 import Nav from "../../Components/Nav/Nav"
-import {GeneralThemeBackground} from "./GeneralTheme.style"
+import {GeneralThemeBackground,GeneralThemeBackgroundBox} from "./GeneralTheme.style"
 
 
 
@@ -14,9 +14,13 @@ const GeneralTheme:React.FC<{
         <Nav />
 
 <br />
+
+<GeneralThemeBackgroundBox >
         {
             props.children
         }
+
+</GeneralThemeBackgroundBox>
         
         </GeneralThemeBackground>
     )

@@ -1,11 +1,8 @@
 import GeneralTheme from "../../theme/GeneralTheme/GeneralTheme"
-import {
-    Notification,NotificationTitle,
-    
-   DestinationBox,DestinationExtraConentInfo
-    } from "./Destination.style"
+import {DestinationBox,DestinationExtraConentInfo} from "./Destination.style"
 import Line from "../../Components/Line";
 import DestinationTab from "./DesitinationTab";
+import PageNotification from "../../Components/Notification/Notification";
 
 const  Destination= ()=>{
     const Content = [
@@ -55,15 +52,13 @@ const  Destination= ()=>{
     return (
 
         <GeneralTheme>
-<DestinationBox>
-<Notification>
-                    <NotificationTitle>
-                        <span>01</span>
-                        <span>PICK YOUR DESTINATION</span>
-            </NotificationTitle>
 
-            
-            </Notification> 
+
+    <PageNotification 
+    count={"01"}
+    title={"PICK YOUR DESTINATION"}
+    />
+
 
 
             
@@ -72,7 +67,7 @@ const  Destination= ()=>{
                 <DestinationTab tabContent={Content} />
 
            
-</DestinationBox>
+
            
         </GeneralTheme>
     )

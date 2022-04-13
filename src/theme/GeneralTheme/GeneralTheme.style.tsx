@@ -12,3 +12,12 @@ height: 100vh;
 height: 120vh;
 }
 `
+
+
+export const GeneralThemeBackgroundBox = styled.div`
+    @media screen and (min-width: 800px){
+            margin:  0 auto;
+            /* border: 1px solid red; */
+            width: 90%;
+    }
+`
