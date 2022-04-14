@@ -31,7 +31,8 @@ const Nav =()=>{
                         </NavLink>
 
                         <NavLink>
-                            <a href="#"><span>02</span> CREW</a>
+                        <Link to="/crew"><span>02</span> CREW</Link>
+
                         </NavLink>
 
                         <NavLink>

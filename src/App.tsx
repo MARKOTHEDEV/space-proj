@@ -4,6 +4,7 @@ import './App.css';
 import Home from './pages/Home/Home';
 import Destination from './pages/Destination/Destination';
 import theme from "./theme/theme";
+import Crew from "./pages/Crew/Crew";
 
 
 const App=()=>{
@@ -15,6 +16,7 @@ const App=()=>{
 
               <Route path="/" element={<Home />} />
               <Route path="/destination" element={<Destination />} />
+              <Route path="/crew" element={<Crew/>} />
               
             </Routes>
     </ThemeProvider>
