@@ -6,6 +6,7 @@ export const GeneralThemeBackground =styled.div`
 
 background-color: ${({theme})=>theme.color.dark};
 height: 100vh;
+overflow: hidden;
 /* height: 120%; */
 
 @media screen and (min-width:600px){

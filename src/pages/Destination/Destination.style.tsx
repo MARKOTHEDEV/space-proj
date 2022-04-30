@@ -17,22 +17,37 @@ interface FlexTwoItemsType{
     widthInPercent?:number;
     isCenter?:boolean;
     spaceAround?:boolean;
+    isReverseColomn?:boolean;
+    isReverseRow?:boolean;
+    maxWidth?:number;
 }
 export const FlexTwoItems= styled.div<FlexTwoItemsType>`
 display: flex;
 flex-direction: column;
-@media screen and (min-width:${(props)=>props.flexAtWhatpx}px){
+height: 100%;
+
+${(props)=>props.isReverseColomn?"flex-direction: column-reverse;":""}
+${(props)=>props.isReverseRow?"flex-direction: row-reverse;":""}
+${(props)=>props.flexAtWhatpx?
+`
+@media screen and (min-width:${props.flexAtWhatpx}px){
     flex-direction: row;
+${props.isReverseRow?"flex-direction: row-reverse;":""}
+
     align-items: center;
     justify-content: space-between;
     /* justify-content: ; */
     /* border: 1px solid blue; */
-    ${(props)=>props.widthInPercent?`width:${props.widthInPercent}%;`:""}
-    ${(props)=>props.isCenter?"margin-left:auto;margin-right:auto;":""}
-    ${(props)=>props.spaceAround?
+    ${props.widthInPercent?`width:${props.widthInPercent}%;`:""}
+    ${props.isCenter?"margin-left:auto;margin-right:auto;":""}
+    ${props.spaceAround?
     "justify-content:space-around;":""
     }
+
 }
+
+`:""}
+
 @media screen and (min-width:1000px){
 margin-left: 0;
 margin-right: 0;
