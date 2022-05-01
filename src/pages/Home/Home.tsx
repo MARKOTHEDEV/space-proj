@@ -3,12 +3,12 @@ import {
     HeroContainer,RoundExploreContainer,HeroContentContainer,HeroHeadingText,RoundExplore
 } from "./Home.style";
 import Nav from "../../Components/Nav/Nav";
-
+import { useNavigate } from "react-router-dom";
 
 
 const Home = ()=>{
 
-
+    const navigate = useNavigate()
     return(
         <HeroImageBackground>
             
@@ -26,7 +26,7 @@ const Home = ()=>{
 
                 <RoundExploreContainer>
 
-                <RoundExplore>
+                <RoundExplore onClick={()=>navigate('destination')}>
                     <p>EXPLORE</p>
                 </RoundExplore>
                 </RoundExploreContainer>
