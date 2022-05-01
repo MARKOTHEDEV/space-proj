@@ -1,6 +1,9 @@
 import styled from "styled-components"
 
 
+interface TabBallType{
+    CurrentTab:number;
+}
 
 export const CrewMemberGenralContainer = styled.div`
 
@@ -44,7 +47,9 @@ margin: 0 auto ;
 `
 
 
-export const TabBall = styled.div`
+
+
+export const TabBall = styled.div<TabBallType>`
     width: 10px;
     height: 10px;
     border-radius: 50%;
@@ -54,8 +59,15 @@ export const TabBall = styled.div`
 
 &:hover{
     cursor: pointer;
-    background-color: #ffffff;
+    background-color: #ffffff7b;
+    /* background-color: #ffffff; */
 }
+&:nth-child(
+        ${(props)=>props.CurrentTab}
+        ){
+        background-color: ${({theme})=>theme.textColor.whiteColor};
+
+    }
 `
 
 

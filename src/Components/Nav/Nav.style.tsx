@@ -174,7 +174,10 @@ span{
     a:hover::after{
         background-color: ${({theme})=>theme.textColor.whiteColor};
     }
+    a.active::after{
+        background-color: ${({theme})=>theme.textColor.whiteColor};
 
+    }
 
 }
 

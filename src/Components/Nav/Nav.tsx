@@ -1,4 +1,4 @@
-import { Link  } from "react-router-dom";
+import { Link ,NavLink as ReactNavLisk} from "react-router-dom";
 import {MainNavContainer,
     LogoContainer,HamBurgerMenuStyle,
     NavLinksContainer,NavLink
@@ -22,16 +22,16 @@ const Nav =()=>{
 
                 <NavLinksContainer showPhoneNav={phoneHamState}>
                         <NavLink>
-                            <Link to="/"><span>00</span> Home</Link>
+                            <ReactNavLisk to="/"><span>00</span> Home</ReactNavLisk>
                         </NavLink>
 
                         <NavLink>
-                        <Link to="/destination"><span>01</span> DESTINATION</Link>
+                        <ReactNavLisk to="/destination"><span>01</span> DESTINATION</ReactNavLisk>
                        
                         </NavLink>
 
                         <NavLink>
-                        <Link to="/crew"><span>02</span> CREW</Link>
+                        <ReactNavLisk to="/crew"><span>02</span> CREW</ReactNavLisk>
 
                         </NavLink>
 
